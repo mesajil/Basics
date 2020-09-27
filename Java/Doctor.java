@@ -8,11 +8,10 @@ public class Doctor {
 
 
     Doctor (String dni, String name, String speciality){
-        this.id = this.ID;
+        this.id = ++ this.ID;
         this.dni = dni;
         this.name = name;
         this.speciality = speciality;
-        this.ID ++;
     }
 
     public void show (){
