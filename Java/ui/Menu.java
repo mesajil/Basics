@@ -1,6 +1,7 @@
+package ui;
 import java.util.Scanner;
 public class Menu {
-    static void show (){
+    public static void show (){
         String opcion = "";
         Scanner sc = new Scanner(System.in);
         do {
