@@ -1,6 +1,6 @@
 import java.util.Scanner;
-class Menu {
-    public static void main (String[] args){
+public class Menu {
+    static void show (){
         String opcion = "";
         Scanner sc = new Scanner(System.in);
         do {
