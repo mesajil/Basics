@@ -4,6 +4,6 @@ public class Main {
         Doctor myDoctor = new Doctor("72397609", "Luis Mesajil", "Developer");
 
         Menu.show ();
-        
+        System.out.println (Menu.MESES);        
     }
 }
