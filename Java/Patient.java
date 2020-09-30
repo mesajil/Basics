@@ -1,14 +1,21 @@
 
 
 public class Patient {
-    String name;
+    public String name;
     String email;
     String address;
     String phoneNumber;
-    String blood;
+    public String blood;
 
     Patient (String name, String email){
         this.name = name;
         this.email = email;
+    }
+    Patient (){
+        this.name = "";
+        this.email = "";
+        this.address = "";
+        this.phoneNumber = "";
+        this.blood = "";
     }
 }
