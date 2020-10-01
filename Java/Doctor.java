@@ -1,6 +1,7 @@
 public class Doctor {
     String dni;
     String name;
+    String email;
     String speciality;
     public int id = 0;
     public static int ID = 0;

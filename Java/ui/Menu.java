@@ -1,7 +1,7 @@
 package ui;
 import java.util.Scanner;
 public class Menu {
-    
+    public static String name = "Menu";    
     public final static String[] MESES = {"Enero", "Febrero"};
     
     public static void show (){
