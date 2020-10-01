@@ -1,5 +1,5 @@
 
-
+const PESO_IDEAL = 62.5;
 const DIAS = 365;
 persona = {
     name: "Juan",
@@ -18,3 +18,14 @@ for (let i = 0; i < 10; i ++){
     console.log(persona.weight.toFixed(2), persona.weight);
     persona.weight = 65;
 }
+
+persona.weight = 65;
+
+let n = 0;
+while (persona.weight > PESO_IDEAL){
+    modificarPeso(persona, randomInt (-0.1, 0.1));
+    n ++;
+}
+
+console.log(n);
+console.log(persona.weight.toFixed(2), persona.weight);
