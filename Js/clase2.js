@@ -1,5 +1,5 @@
 
-const PESO_IDEAL = 62.5;
+const PESO_IDEAL = 63.5;
 const DIAS = 365;
 persona = {
     name: "Juan",
@@ -11,21 +11,24 @@ persona = {
 const randomInt = (min, max) => Math.random() * (max -min) + min;
 const modificarPeso = (persona, weight) => persona.weight += weight;
 
-for (let i = 0; i < 10; i ++){
-    for (let i = 0; i < DIAS; i ++){
-        modificarPeso(persona, randomInt (-0.1, 0.1));
-    }
-    console.log(persona.weight.toFixed(2), persona.weight);
-    persona.weight = 65;
-}
 
 persona.weight = 65;
 
-let n = 0;
-while (persona.weight > PESO_IDEAL){
+let dias = 0;
+do{
     modificarPeso(persona, randomInt (-0.1, 0.1));
-    n ++;
-}
+    dias ++;
 
-console.log(n);
-console.log(persona.weight.toFixed(2), persona.weight);
+}while (persona.weight > PESO_IDEAL);
+
+console.log(`Pasaron ${dias} dias para llegar al peso ideal de ${persona.weight.toFixed(2)}.`);
+
+let llueve = () => Math.random() < 0.15;
+let contador = 0
+
+do {
+    contador ++
+}while(!llueve());
+
+
+console.log (`Revisé ${contador} ${contador==1?"vez":"veces"} si llovía`)
