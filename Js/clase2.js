@@ -1,5 +1,5 @@
 
-const PESO_IDEAL = 63.5;
+const PESO_IDEAL = 64.5;
 const DIAS = 365;
 persona = {
     name: "Juan",
@@ -29,6 +29,20 @@ let contador = 0
 do {
     contador ++
 }while(!llueve());
+let e = Number(prompt("Ingrese 0 o 1"))
+console.log(e);
+switch (e){
+    case 0:
+        console.log ("Case 0");
+        break;
+    case 1:
+        console.log (`Revisé ${contador} ${contador==1?"vez":"veces"} si llovía`)
+        break;
+    default:
+        console.log("Hello World !");
+}
 
+if (e === 0) console.log ("Case 0");
+else if (e === 1) console.log (`Revisé ${contador} ${contador==1?"vez":"veces"} si llovía`);
+else console.log("Hello World !");
 
-console.log (`Revisé ${contador} ${contador==1?"vez":"veces"} si llovía`)
