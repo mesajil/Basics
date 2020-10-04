@@ -6,7 +6,7 @@ public class Main {
         Patient myPatient2 = new Patient ();
         // Menu.show ();
         
-        myPatient.SetWeight (605.5, "gramos");
-        System.out.println(myPatient.GetWeight());
+        myPatient.setWeight (605.5, "gramos");
+        System.out.println(myPatient.getWeight());
     }
 }

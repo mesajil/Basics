@@ -21,16 +21,16 @@ public class Patient {
         this.blood = "";
     }
 
-    String GetName (){
+    String getName (){
         return this.name;
     }
-    void SetName (String name){
+    void setName (String name){
         this.name = name;
     }
-    String GetWeight (){
+    String getWeight (){
         return this.weight;
     }
-    void SetWeight (double weight, String unidades){
+    void setWeight (double weight, String unidades){
         this.weight = weight + " " + unidades;
     }
 }
