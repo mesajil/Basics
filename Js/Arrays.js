@@ -55,13 +55,38 @@ let personas = [per1, per2, per3]
 // let per = personas.some (p => p.nombre == "Sacha")
 // console.log (per)
 
-// Modificar altura de las personas a centímetros utilizando el método map
+// // Modificar altura de las personas a centímetros utilizando el método map
 
-let cambiarAltura = (per) => ({...per, altura: per.altura * 100})
-let personasCms = personas.map (cambiarAltura)
-console.table(personasCms)
-for (let per of personasCms){
-    console.table(per)
+// let cambiarAltura = (per) => ({...per, altura: per.altura * 100})
+// let personasCms = personas.map (cambiarAltura)
+// console.table(personasCms)
+// for (let per of personasCms){
+//     console.table(per)
+// }
+
+// Calcular la suma de pesos de las personas utilizando el método reduce
+
+let incSuma = (suma, per) => suma + per.altura 
+let totalAltura = personas.reduce(incSuma, 0)
+console.log (`La suma total de las alturas es ${totalAltura}`)
+console.log (typeof(totalAltura))
+
+// Generar diccionario de nombres repetidos utilizando el método reduce
+
+const nombres = ["Jorge", "Maria", "Jose", "Bob", "Pat", "Maria", "Jose", "Jose"]
+
+function modificarDicc (dicc, e){
+    // dicc[e] = (dicc[e] || 0) + 1
+    if (e in dicc)
+        dicc[e] ++
+    else
+        dicc[e] = 1
+    return dicc
 }
+let dicc = nombres.reduce(modificarDicc, {})
+console.log(dicc)
+
+
+
 
 
