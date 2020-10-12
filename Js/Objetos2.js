@@ -5,8 +5,11 @@ class Persona {
         this.altura = altura
     }
 
-    saludar (){
+    saludar (devolverSaludo){
         console.log(`Hola, me llamo ${this.nombre} ${this.apellido}`)
+        if (devolverSaludo){
+            devolverSaludo(this.nombre, this.apellido)
+        }
     }
 
     esAlto (){
@@ -20,11 +23,20 @@ class Desarrollador extends Persona {
         this.language = language
     }
 
-    saludar (){
+    saludar (devolverSaludo){
         console.log(`Hola, me llamo ${this.nombre} ${this.apellido} y mi lenguaje de programación es ${this.language}`)
+        if (devolverSaludo) {
+            devolverSaludo(this.nombre, this.apellido, true)
+        }
+    }
+}
+function devolverSaludo (nombre, apellido, isDev){
+    console.log(`Hola, ${nombre} ${apellido}`)
+    if (isDev){
+        console.log(`No sabía que eras desarrollador.`)
     }
 }
 
 let per = new Desarrollador("Luis", "Mesajil", 1.7, "Javascript")
-
-console.log(per)
+let per1 = new Persona("Pedro", "Gomez")
+per1.saludar(devolverSaludo)
