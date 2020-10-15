@@ -39,4 +39,4 @@ function devolverSaludo (nombre, apellido, isDev){
 
 let per = new Desarrollador("Luis", "Mesajil", 1.7, "Javascript")
 let per1 = new Persona("Pedro", "Gomez")
-per1.saludar(devolverSaludo)
+per.saludar(devolverSaludo)
